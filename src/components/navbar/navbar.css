@@ -1,0 +1,17 @@
+.container__navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+}
+.logo{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.nav__list a{
+ padding-right: 1.5rem;
+}
+.nav__list a:last-child{
+ padding-right: 0;
+}
