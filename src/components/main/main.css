@@ -5,7 +5,7 @@
     gap: 1.7rem;
     }
     
-    .content__main-1{ grid-area: 1 / 1 / 2 / 3; }
+    .content__main-1{ grid-area: 1 / 1 / 2 / 3;}
     .content__main-2{ grid-area: 2 / 1 / 3 / 2; }
     .content__main-3{ grid-area: 2 / 2 / 3 / 3; }
     .content__main-4{ grid-area: 1 / 3 / 3 / 4; }
@@ -30,10 +30,12 @@
     .content__bottom-container{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
         margin-top: 4rem;
     }
    .content__reviews{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.2rem;
    }
    .content__text{
@@ -44,9 +46,25 @@
    .content__reviews h4{
     color: var(--color-bg-variant);
     font-weight: 700;
+    transition: var(--transitions);
+   }
+   .content__reviews h4:hover{
+    color: var(--color-primary-variant);
    }
    .content__reviews h3{
     color: var(--color-font-variant);
     font-weight: 600;
     font-size: 2rem;
    }
+   @media(max-width: 1024px){
+    .container__main{
+        width: var(--container-width-md);
+    }
+
+        }
+    @media(max-width: 600px){
+        .content__top {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+        }

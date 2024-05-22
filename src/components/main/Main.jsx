@@ -32,8 +32,8 @@ const data = [
 export default function () {
   return (
     <main id="main">
-      <div class="container container__main">
-        <div class="content__top">
+      <div className="container container__main">
+        <div className="content__top">
           <div className="content__main-1">
             <img src={WebDesktopImg} alt="main-pic" className="main__image" />
           </div>
@@ -46,7 +46,7 @@ export default function () {
               power of the platforms back into the hands of the people. But is
               it really fulfilling its promise?
             </p>
-            <a href="#" class="btn btn-primary">
+            <a href="#" className="btn btn-primary">
               Read more
             </a>
           </div>
@@ -76,8 +76,8 @@ export default function () {
           <div className="content__bottom-container">
             {data.map(({ id, img, number, title, description }) => {
               return (
-                <div id={id} className="content__reviews">
-                  <div>
+                <div key={id} className="content__reviews">
+                  <div className="content__review-img">
                     <img src={img} alt={title} />
                   </div>
                   <div className="content__text">
