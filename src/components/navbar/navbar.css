@@ -9,9 +9,31 @@
     font-size: 4rem;
     font-weight: 700;
 }
+.nav__list{
+    display: flex;
+  }
+
 .nav__list a{
  padding-right: 1.5rem;
 }
 .nav__list a:last-child{
  padding-right: 0;
+}
+@media (max-width: 1024px) {
+    .container__navbar{
+        width: var( --container-width-md);
+    }
+}
+@media (max-width: 1000px) {
+  .nav__list{
+    flex-direction: column;
+    display: none;
+  }
+  .container__navbar::after{
+    content: "";
+    background-image: url(../../assets/images/icon-menu.svg);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 17px;
+  }
 }

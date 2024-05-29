@@ -11,7 +11,7 @@ const data = [
     img: IMG2,
     number: "01",
     title: "Reviving Retro PCs",
-    description: "What happens when old PCs are given modern upgrades? ",
+    description: "What happens when old PCs are given modern upgrades?",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const data = [
   },
 ];
 
-export default function () {
+export default function Main() {
   return (
     <main id="main">
       <div className="container container__main">
@@ -64,30 +64,28 @@ export default function () {
               </p>
             </div>
             <div className="float__main">
-              <h4>s VC Funding Drying Up? </h4>
+              <h4>Is VC Funding Drying Up?</h4>
               <p>
                 Private funding by VC firms is down 50% YOY. We take a look at
-                what that means.{" "}
+                what that means.
               </p>
             </div>
           </div>
         </div>
         <div className="content__bottom">
           <div className="content__bottom-container">
-            {data.map(({ id, img, number, title, description }) => {
-              return (
-                <div key={id} className="content__reviews">
-                  <div className="content__review-img">
-                    <img src={img} alt={title} />
-                  </div>
-                  <div className="content__text">
-                    <h3>{number}</h3>
-                    <h4>{title}</h4>
-                    <p>{description}</p>
-                  </div>
+            {data.map(({ id, img, number, title, description }) => (
+              <div key={id} className="content__reviews">
+                <div className="content__review-img">
+                  <img src={img} alt={title} />
                 </div>
-              );
-            })}
+                <div className="content__text">
+                  <h3>{number}</h3>
+                  <h4>{title}</h4>
+                  <p>{description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
