@@ -74,6 +74,9 @@
 }
 
 @media (max-width: 1000px) {
+    .container__main{
+        width: var( --container-width-sm);
+    }
     .content__top {
         grid-template-columns: 1fr;
         gap: 1rem;
